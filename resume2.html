@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compact Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fc; /* Light grey background */
+      color: #333333;
+    }
+
+    .resume-container {
+      width: 100%;
+      margin: 10px;
+      padding: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      font-size: 10px; /* Further reduce font size for compactness */
+    }
+
+    .section {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #3498db; /* Blue divider between sections */
+    }
+
+    h2, h3 {
+      font-weight: 600;
+      margin: 5px 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #2c3e50; /* Dark blue for title */
+    }
+
+    h3 {
+      font-size: 14px;
+      color: #3498db; /* Blue for section titles */
+    }
+
+    p {
+      font-size: 10px; /* Smaller text for content */
+      line-height: 1.4;
+      color: #555555;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      font-size: 10px;
+      margin-bottom: 3px;
+    }
+
+    li::before {
+      content: '▪';
+      color: #3498db; /* Blue bullet points */
+      margin-right: 5px;
+      font-size: 8px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    /* Profile Section */
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .profile-picture-container {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #7f8c8d;
+      cursor: pointer;
+    }
+
+    .profile-picture-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2c3e50;
+      margin: 0;
+    }
+
+    .profile-section p {
+      font-size: 10px;
+      line-height: 1.4;
+      color: #555555;
+    }
+
+    button {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 6px 12px;
+      font-size: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #2c3e50;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .resume-container {
+        width: 90%;
+      }
+
+      .profile-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-container" id="resume-container">
+    <!-- Profile Section -->
+    <div class="section" id="profile-section">
+      <div class="profile-section">
+        <div class="profile-picture-container" id="profilePictureContainer">
+          <img id="profilePicture" src="user.png" alt="Profile Picture" />
+          <input type="file" id="profileImageInput" accept="image/*">
+        </div>
+        <div>
+          <h2 contenteditable="true">John Doe</h2>
+          <p contenteditable="true">A highly skilled software developer with 5+ years of experience in building innovative solutions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact-section">
+      <h3>Contact</h3>
+      <ul>
+        <li contenteditable="true">Phone: +1 234 567 890</li>
+        <li contenteditable="true">Email: johndoe@example.com</li>
+        <li contenteditable="true">Website: www.johndoe.dev</li>
+        <li contenteditable="true">Location: San Francisco, CA</li>
+      </ul>
+    </div>
+
+    <!-- Personal Info Section -->
+    <div class="section" id="personal-info-section">
+      <h3>Personal Information</h3>
+      <ul>
+        <li contenteditable="true">Date of Birth: January 1, 1990</li>
+        <li contenteditable="true">Nationality: American</li>
+        <li contenteditable="true">Gender: Male</li>
+        <li contenteditable="true">Marital Status: Single</li>
+      </ul>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section" id="skills-section">
+      <h3>Skills</h3>
+      <ul>
+        <li contenteditable="true">JavaScript (Expert)</li>
+        <li contenteditable="true">ReactJS (Advanced)</li>
+        <li contenteditable="true">Node.js (Intermediate)</li>
+        <li contenteditable="true">MongoDB (Intermediate)</li>
+      </ul>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="section" id="experience-section">
+      <h3>Experience</h3>
+      <p contenteditable="true"><strong>Senior Software Engineer</strong> - ABC Corp (2020 - Present)</p>
+      <p contenteditable="true">Responsible for developing web applications, integrating APIs, and optimizing user interfaces for better performance.</p>
+      <p contenteditable="true"><strong>Software Engineer</strong> - XYZ Ltd (2017 - 2020)</p>
+      <p contenteditable="true">Worked in building scalable back-end systems using Node.js and MongoDB, and developed multiple RESTful APIs.</p>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section" id="education-section">
+      <h3>Education</h3>
+      <p contenteditable="true">Bachelor of Science in Computer Science - University of California, Berkeley (2016)</p>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section" id="projects-section">
+      <h3>Projects</h3>
+      <p contenteditable="true"><strong>Personal Portfolio</strong>: Designed and developed a personal portfolio website showcasing web development projects.</p>
+      <p contenteditable="true"><strong>Task Management App</strong>: A web-based application to manage daily tasks with a simple and clean interface using React and Redux.</p>
+    </div>
+
+    <!-- Languages Section -->
+    <div class="section" id="languages-section">
+      <h3>Languages</h3>
+      <ul>
+        <li contenteditable="true">English (Fluent)</li>
+        <li contenteditable="true">Spanish (Intermediate)</li>
+        <li contenteditable="true">French (Basic)</li>
+      </ul>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="section" id="certifications-section">
+      <h3>Certifications</h3>
+      <ul>
+        <li contenteditable="true">Certified React Developer - React Training Academy (2020)</li>
+        <li contenteditable="true">Full Stack Web Development - Tech University (2019)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Visible Download Button -->
+  <button id="downloadResumeBtn">Download Resume</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  <script>
+    const profilePicture = document.getElementById("profilePicture");
+    const profileImageInput = document.getElementById("profileImageInput");
+
+    // Open file picker when profile picture is clicked
+    profilePicture.addEventListener("click", () => {
+      profileImageInput.click();
+    });
+
+    // Change profile picture when a file is selected
+    profileImageInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (file && file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          profilePicture.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert("Please select a valid image file.");
+      }
+    });
+
+    const downloadResumeBtn = document.getElementById("downloadResumeBtn");
+    const resumeContainer = document.getElementById("resume-container");
+
+    // Listen for button click to generate PDF
+    downloadResumeBtn.addEventListener("click", () => {
+      // Hide the download button in the PDF output
+      downloadResumeBtn.style.display = "none";
+
+      const options = {
+        margin: [0.25, 0.25, 0.25, 0.25], // Reduced margins
+        filename: 'resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 }, // Reduced scale to fit everything on one page
+        jsPDF: {
+          unit: 'in',
+          format: 'letter',
+          orientation: 'portrait',
+          compressPdf: true,
+          hotfixes: ['px_scaling']
+        }
+      };
+
+      html2pdf().set(options).from(resumeContainer).save().then(() => {
+        // Restore the download button after PDF is generated
+        downloadResumeBtn.style.display = "inline-block";
+      });
+    });
+  </script>
+
+</body>
+</html>

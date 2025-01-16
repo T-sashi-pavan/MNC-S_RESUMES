@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Customizable Resume</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        /* Customizable Styles */
+        .custom-color {
+            color: #4CAF50; /* Change this to modify primary color */
+        }
+
+        .custom-bg {
+            background-color: #f9f9f9; /* Change this to modify background color */
+        }
+
+        .container h2,
+        .container h3 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .profile-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .profile-picture-container {
+            position: relative;
+            width: 140px;
+            height: 140px;
+        }
+
+        .profile-picture-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            flex: 1;
+            margin-top: 10px;
+        }
+
+        .profile-info h2 {
+            font-size: 26px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        /* Achievements Section */
+        .achievements-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .achievement {
+            background-color: #e9f6e2;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #4CAF50;
+        }
+
+        .achievement-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .achievement-description {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .download-button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .section .editable {
+            border: 1px dashed #ddd;
+            padding: 5px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="customizable-resume-container">
+
+    <!-- Profile Section -->
+    <div class="profile-section">
+        <div class="profile-picture-container" id="profilePictureContainer">
+            <img id="profilePicture" src="user.png" alt="Profile Picture">
+            <input type="file" id="profileImageInput" accept="image/*" style="display:none;">
+        </div>
+        <div class="profile-info">
+            <h2 contenteditable="true">Lucas Walker</h2>
+            <p contenteditable="true">Dynamic digital marketing strategist with expertise in content creation, SEO optimization, and data-driven campaigns. Passionate about brand growth and customer engagement.</p>
+        </div>
+    </div>
+
+    <!-- Key Achievements Section -->
+    <div class="section achievements-section">
+        <h3 class="custom-color">Key Achievements</h3>
+        <div class="achievement">
+            <div class="achievement-title" contenteditable="true">Boosted Web Traffic by 50%</div>
+            <div class="achievement-description" contenteditable="true">Increased organic traffic by 50% through targeted content strategy and SEO optimization.</div>
+        </div>
+        <div class="achievement">
+            <div class="achievement-title" contenteditable="true">Developed Award-Winning Ad Campaigns</div>
+            <div class="achievement-description" contenteditable="true">Created ad campaigns that earned "Best Digital Ad" recognition at the 2022 Marketing Awards.</div>
+        </div>
+        <div class="achievement">
+            <div class="achievement-title" contenteditable="true">Optimized Conversion Rate by 35%</div>
+            <div class="achievement-description" contenteditable="true">Revamped landing page designs and improved call-to-action buttons to enhance conversion rates.</div>
+        </div>
+        <div class="achievement">
+            <div class="achievement-title" contenteditable="true">Lead 10+ Marketing Teams</div>
+            <div class="achievement-description" contenteditable="true">Led cross-functional teams of more than 10 people to execute successful marketing strategies.</div>
+        </div>
+    </div>
+
+    <!-- Work Experience Section -->
+    <div class="section work-experience">
+        <h3 class="custom-color">Work Experience</h3>
+        <ul>
+            <li contenteditable="true">Digital Marketing Lead at ABC Corp (2020 - Present) - Focused on content strategy, SEO, and paid campaigns, leading to a 25% increase in overall revenue.</li>
+            <li contenteditable="true">SEO Specialist at XYZ Digital (2018 - 2020) - Conducted SEO audits, keyword research, and backlink strategy to improve organic search results.</li>
+        </ul>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section education">
+        <h3 class="custom-color">Education</h3>
+        <ul>
+            <li contenteditable="true">M.S. in Marketing, Stanford University, 2017</li>
+            <li contenteditable="true">B.A. in Business Administration, University of Florida, 2015</li>
+        </ul>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section skills">
+        <h3 class="custom-color">Skills</h3>
+        <ul>
+            <li contenteditable="true">Search Engine Optimization (SEO)</li>
+            <li contenteditable="true">Data Analytics and Reporting</li>
+            <li contenteditable="true">Social Media Marketing</li>
+            <li contenteditable="true">Email Marketing</li>
+            <li contenteditable="true">Content Strategy and Development</li>
+        </ul>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="section certifications">
+        <h3 class="custom-color">Certifications</h3>
+        <ul>
+            <li contenteditable="true">Google Analytics Certified, 2021</li>
+            <li contenteditable="true">HubSpot Content Marketing Certification, 2020</li>
+        </ul>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section projects">
+        <h3 class="custom-color">Projects</h3>
+        <ul>
+            <li contenteditable="true"><a href="https://www.linkedin.com" target="_blank">Project 1: Digital Advertising Optimization</a> - Implemented strategies that reduced CPC by 25%.</li>
+            <li contenteditable="true"><a href="https://www.behance.net" target="_blank">Project 2: Social Media Campaign for Global Brand</a> - Led a multi-platform campaign that increased engagement by 40%.</li>
+        </ul>
+    </div>
+
+    <!-- Languages Section -->
+    <div class="section languages">
+        <h3 class="custom-color">Languages</h3>
+        <ul>
+            <li contenteditable="true">English (Fluent)</li>
+            <li contenteditable="true">French (Conversational)</li>
+        </ul>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div class="section hobbies">
+        <h3 class="custom-color">Hobbies</h3>
+        <ul>
+            <li contenteditable="true">Photography</li>
+            <li contenteditable="true">Reading Novels</li>
+            <li contenteditable="true">Cycling</li>
+        </ul>
+    </div>
+
+    <!-- Download Resume Button -->
+    <div class="download-button-container">
+        <button class="button" id="downloadResumeBtn">Download Resume</button>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script>
+    const profilePicture = document.getElementById("profilePicture");
+    const profileImageInput = document.getElementById("profileImageInput");
+
+    // Open file picker when profile picture is clicked
+    profilePicture.addEventListener("click", () => {
+        profileImageInput.click();
+    });
+
+    // Change profile picture when a file is selected
+    profileImageInput.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                profilePicture.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            alert("Please select a valid image file.");
+        }
+    });
+
+    const downloadResumeBtn = document.getElementById("downloadResumeBtn");
+    const resumeContainer = document.getElementById("customizable-resume-container");
+
+    // Listen for button click to generate PDF
+    downloadResumeBtn.addEventListener("click", () => {
+        // Hide the download button in the PDF output
+        downloadResumeBtn.style.display = "none";
+
+        const options = {
+            margin: [0.1, 0.1, 0.1, 0.1],
+            filename: 'customizable_resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: {
+                unit: 'in',
+                format: 'letter',
+                orientation: 'portrait',
+                compressPdf: true,
+                hotfixes: ['px_scaling'],
+                links: true  // Enable clickable links
+            }
+        };
+
+        html2pdf().set(options).from(resumeContainer).save().then(() => {
+            // Restore the download button after PDF is generated
+            downloadResumeBtn.style.display = "inline-block";
+        });
+    });
+</script>
+
+</body>
+</html>

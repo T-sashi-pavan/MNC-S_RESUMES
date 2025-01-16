@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Template</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e8f5f9; /* Light teal background */
+      color: #333333; /* Dark grey text */
+    }
+
+    .resume-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #ffffff; /* White card background */
+    }
+
+    /* Left Section */
+    .left-section {
+      background: linear-gradient(135deg, #004d61, #009688); /* Teal gradient */
+      color: #ffffff; /* White text */
+      width: 35%;
+      padding: 30px;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile-picture-container {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #ffffff; /* White border for emphasis */
+      background-color: #004d61; /* Placeholder color */
+    }
+
+    .profile-picture-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .left-section h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px 0 10px;
+    }
+
+    .left-section p {
+      font-size: 14px;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    .left-section h3 {
+      font-size: 18px;
+      margin-top: 30px;
+      font-weight: bold;
+      border-bottom: 3px solid #ffffff; /* White underline */
+      padding-bottom: 5px;
+    }
+
+    .left-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .left-section ul li {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .left-section ul li::before {
+      content: '▪';
+      color: #ffcc00; /* Golden bullet points */
+      margin-right: 10px;
+      font-size: 10px;
+    }
+
+    /* Right Section */
+    .right-section {
+      padding: 40px;
+      width: 65%;
+    }
+
+    .right-section h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #009688; /* Teal heading */
+      border-bottom: 3px solid #009688;
+      padding-bottom: 8px;
+    }
+
+    .right-section p {
+      font-size: 15px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      color: #555555; /* Medium grey text */
+    }
+
+    .right-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .right-section ul li {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .right-section ul li::before {
+      content: '▹';
+      color: #009688; /* Teal bullet points */
+      margin-right: 8px;
+      font-size: 14px;
+    }
+
+    /* Buttons & Links */
+    button,
+    a {
+      display: inline-block;
+      font-size: 14px;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #009688; /* Teal button */
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover,
+    a:hover {
+      background-color: #004d61; /* Dark teal on hover */
+    }
+
+    /* Icons and Highlights */
+    .contact p i,
+    .personal-info p i,
+    .skills i,
+    .languages i {
+      color: #ffcc00; /* Golden icons */
+      margin-right: 10px;
+    }
+
+    .skills .skill {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .skills .skill-bar {
+      background-color: #e8f5f9; /* Light teal background for skill bar */
+      height: 8px;
+      width: 70%;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .skills .skill-bar span {
+      display: block;
+      height: 100%;
+      background-color: #009688; /* Teal fill */
+      transition: width 0.5s ease;
+    }
+
+    .skills .skill-bar span:hover {
+      background-color: #004d61; /* Dark teal fill on hover */
+    }
+
+    /* Center the button */
+    #downloadResumeBtn {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #004d61; /* Dark teal background */
+      padding: 12px 25px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      margin: 20px auto; /* Center the button horizontally */
+      display: block; /* Make it a block element */
+    }
+
+    #downloadResumeBtn:hover {
+      background-color: #009688; /* Teal background on hover */
+      transform: scale(1.05); /* Slightly enlarge button on hover */
+    }
+
+    #downloadResumeBtn:focus {
+      outline: none; /* Remove outline on focus */
+    }
+
+    #downloadResumeBtn:active {
+      background-color: #003740; /* Darker shade of teal on active click */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .resume-container {
+        flex-direction: column;
+      }
+
+      .left-section,
+      .right-section {
+        width: 100%;
+      }
+
+      .left-section {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container" id="resume-container">
+    <!-- Left Section -->
+    <div class="left-section">
+      <div class="profile">
+        <div class="profile-picture-container" id="profilePictureContainer">
+          <img id="profilePicture" src="user.png" alt="Profile Picture">
+          <input type="file" id="profileImageInput" accept="image/*">
+        </div>
+        <!-- <div class="upload-instruction">Click on the picture to upload</div> -->
+        <h2 contenteditable="true">John Doe</h2>
+        <p contenteditable="true">Software Developer</p>
+      </div>
+      <div class="contact">
+        <h3><i class="fas fa-phone"></i> Contact</h3>
+        <p contenteditable="true">Address: 123 Main Street, New York, NY 10001</p>
+        <p contenteditable="true">Phone: +1 123 456 7890</p>
+        <p contenteditable="true">E-mail: johndoe@example.com</p>
+      </div>
+      <div class="personal-info">
+        <h3><i class="fas fa-info-circle"></i> Personal Information</h3>
+        <p contenteditable="true">Date of Birth: January 1, 1995</p>
+        <p contenteditable="true">Nationality: American</p>
+        <p contenteditable="true">Gender: Male</p>
+        <p contenteditable="true">Marital Status: Single</p>
+      </div>
+      <div class="skills">
+        <h3><i class="fas fa-cogs"></i> Skills</h3>
+        <ul>
+          <li contenteditable="true">Automation Testing</li>
+          <li contenteditable="true">Java</li>
+          <li contenteditable="true">Manual Testing</li>
+          <li contenteditable="true">SQL</li>
+        </ul>
+      </div>
+      <div class="languages">
+        <h3><i class="fas fa-language"></i> Languages</h3>
+        <ul>
+          <li contenteditable="true">English (Fluent)</li>
+          <li contenteditable="true">Spanish (Intermediate)</li>
+          <li contenteditable="true">French (Basic)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <div class="summary">
+        <h3>Summary</h3>
+        <p contenteditable="true">I am a highly skilled and motivated software professional with over 3 years of experience in software testing and development. Adept at ensuring software quality through rigorous manual and automated testing.</p>
+      </div>
+      <div class="work-history">
+        <h3>Experience</h3>
+        <p contenteditable="true"><strong>Software Developer</strong> - XYZ Solutions</p>
+        <p contenteditable="true">XYZ Solutions, New York, NY
+          January 2021 – Present</p>
+        <p contenteditable="true">Conducted manual and automated testing for web and mobile applications, ensuring 99.9% bug-free delivery.
+         </p>
+
+        <p contenteditable="true"><strong>Software Tester</strong> - ABC Tech</p>
+        <p contenteditable="true">San Francisco, CA (2019 - 2021)</p>
+        <p contenteditable="true">Conducted manual and automated testing for web and mobile applications, ensuring 99.9% bug-free delivery.
+          </p>
+      </div>
+      <div class="projects">
+        <h3>Projects</h3>
+        <p contenteditable="true"><strong>E-commerce Web Application Testing</strong></p>
+        <p contenteditable="true">Performed manual and automation testing for a high-traffic e-commerce platform.</p>
+      </div>
+      <div class="education">
+        <h3>Education</h3>
+        <p contenteditable="true">Bachelor's Degree in Computer Science - University of New York</p>
+        <p contenteditable="true">Graduated: 2017</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="icon-container">
+    <i id="downloadIcon" class="fas fa-download"></i> <!-- Download icon -->
+  </div>
+
+  <button id="downloadResumeBtn">Download Resumed</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  <!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<script>
+    const profilePicture = document.getElementById("profilePicture");
+    const profileImageInput = document.getElementById("profileImageInput");
+
+    // Open file picker when profile picture is clicked
+    profilePicture.addEventListener("click", () => {
+        profileImageInput.click();
+    });
+
+    // Change profile picture when a file is selected
+    profileImageInput.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                profilePicture.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            alert("Please select a valid image file.");
+        }
+    });
+const downloadResumeBtn = document.getElementById("downloadResumeBtn");
+    const resumeContainer = document.getElementById("resume-container");
+
+    downloadResumeBtn.addEventListener("click", () => {
+        const options = {
+        margin: [0.5, 0.5, 0.5, 0.5], // Adjust margins
+            filename: 'resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: {  unit: 'in', 
+                format: 'letter', 
+                orientation: 'portrait',
+                compressPdf: true, // Compress the PDF for better quality and file size
+                hotfixes: ['px_scaling'] // Fixes for pixel scaling issues
+                 }
+        };
+
+        html2pdf().set(options).from(resumeContainer).save();
+    });
+   
+</script>
+</body>
+</html>
+
+
+
+        };

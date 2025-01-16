@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Block Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    /* Color Block Styles */
+    .color-block {
+      width: 100%;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .color-block h3 {
+      font-size: 24px;
+      color: white;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .profile-section {
+      background-color: #3498db;
+      color: white;
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    .profile-section .profile-info {
+      flex: 1;
+    }
+
+    .profile-section .profile-picture-container {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #bdc3c7;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .profile-section .profile-picture-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-section,
+    .skills-section,
+    .education-section,
+    .experience-section {
+      background-color: #2ecc71;
+      color: white;
+      flex: 1 1 100%;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .project-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .project-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .button {
+      background-color: #e74c3c;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #2980b9;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .profile-section,
+      .project-section,
+      .skills-section,
+      .education-section,
+      .experience-section {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="portfolio-container">
+
+    <!-- Profile Section -->
+    <div class="color-block profile-section">
+      <div class="profile-info">
+        <h2 contenteditable="true">John Smith</h2>
+        <p contenteditable="true">A passionate UI/UX Designer with a knack for creating engaging, visually appealing digital experiences. Adept at HTML5, CSS3, JavaScript, and Figma.</p>
+        <p contenteditable="true">Based in Los Angeles, CA, I bring over 5 years of experience in the design industry and love to collaborate on cutting-edge web and mobile projects.</p>
+      </div>
+      <div class="profile-picture-container" id="profilePictureContainer">
+        <img id="profilePicture" src="user.png" alt="Profile Picture" />
+        <input type="file" id="profileImageInput" accept="image/*">
+      </div>
+    </div>
+
+    <!-- Project Section -->
+    <div class="color-block project-section">
+      <h3>Featured Projects</h3>
+      <div class="project-item">
+        <h4 contenteditable="true">E-Commerce Platform</h4>
+        <img id="project1-img" src="project1.jpg" alt="Project 1">
+        <input type="file" accept="image/*" onchange="updateImage('project1-img', this)">
+        <p contenteditable="true">Created a user-friendly e-commerce platform that resulted in a 25% increase in online sales. Focused on responsive design and smooth user experience.</p>
+      </div>
+      <div class="project-item">
+        <h4 contenteditable="true">Mobile Game Interface</h4>
+        <img id="project2-img" src="project2.jpg" alt="Project 2">
+        <input type="file" accept="image/*" onchange="updateImage('project2-img', this)">
+        <p contenteditable="true">Designed an interactive and engaging mobile game interface that received positive feedback from users. Implemented a dark/light mode toggle for accessibility.</p>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="color-block skills-section">
+      <h3>Skills & Tools</h3>
+      <ul>
+        <li contenteditable="true">UI/UX Design</li>
+        <li contenteditable="true">HTML5, CSS3, JavaScript</li>
+        <li contenteditable="true">Figma, Adobe XD</li>
+        <li contenteditable="true">Responsive Web Design</li>
+        <li contenteditable="true">Prototyping & Wireframing</li>
+      </ul>
+    </div>
+
+    <!-- Education Section -->
+    <div class="color-block education-section">
+      <h3>Education</h3>
+      <p contenteditable="true"><strong>Bachelor of Arts in Graphic Design</strong> - University of California (2014 - 2018)</p>
+      <p contenteditable="true">Graduated with honors, specializing in web design and user experience. Completed various projects that involved both web and mobile app design.</p>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="color-block experience-section">
+      <h3>Work Experience</h3>
+      <div class="experience-item">
+        <p contenteditable="true"><strong>Senior UI/UX Designer</strong> - Creative Tech Studio (2020 - Present)</p>
+        <p contenteditable="true">Leading design projects, mentoring junior designers, and collaborating with developers to create seamless user experiences for web and mobile apps.</p>
+      </div>
+      <div class="experience-item">
+        <p contenteditable="true"><strong>UI Designer</strong> - Web Solutions Co. (2018 - 2020)</p>
+        <p contenteditable="true">Worked on user interface design for various web applications, ensuring user-centric designs and seamless integration with backend systems.</p>
+      </div>
+    </div>
+
+    <!-- Download Button -->
+    <button class="button" id="downloadPortfolioBtn">Download Portfolio</button>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <script>
+    const profilePicture = document.getElementById("profilePicture");
+    const profileImageInput = document.getElementById("profileImageInput");
+
+    // Open file picker when profile picture is clicked
+    profilePicture.addEventListener("click", () => {
+      profileImageInput.click();
+    });
+
+    // Change profile picture when a file is selected
+    profileImageInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (file && file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          profilePicture.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert("Please select a valid image file.");
+      }
+    });
+
+    function updateImage(imgId, input) {
+      const file = input.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById(imgId).src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    const downloadPortfolioBtn = document.getElementById("downloadPortfolioBtn");
+    const portfolioContainer = document.getElementById("portfolio-container");
+
+    // Listen for button click to generate PDF
+    downloadPortfolioBtn.addEventListener("click", () => {
+      // Hide the download button in the PDF output
+      downloadPortfolioBtn.style.display = "none";
+
+      const options = {
+        margin: [0.1, 0.1, 0.1, 0.1],
+        filename: 'color_block_resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: {
+          unit: 'in',
+          format: 'letter',
+          orientation: 'portrait',
+          compressPdf: true,
+          hotfixes: ['px_scaling']
+        }
+      };
+
+      html2pdf().set(options).from(portfolioContainer).save().then(() => {
+        // Restore the download button after PDF is generated
+        downloadPortfolioBtn.style.display = "inline-block";
+      });
+    });
+  </script>
+
+</body>
+</html>

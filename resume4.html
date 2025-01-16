@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Style Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f3f5;
+      color: #333;
+    }
+
+    .resume-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h2, h3 {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    h3 {
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    p, li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #7f8c8d;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    /* Profile Section */
+    .profile-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .profile-info {
+      max-width: 60%;
+    }
+
+    .profile-picture-container {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #bdc3c7;
+      cursor: pointer;
+    }
+
+    .profile-picture-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Contact Info Section */
+    .contact-section {
+      margin-bottom: 30px;
+    }
+
+    .contact-section ul {
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .contact-section li {
+      margin-bottom: 8px;
+    }
+
+    .contact-section li::before {
+      content: "•";
+      margin-right: 8px;
+      color: #3498db;
+    }
+
+    /* Skills Section */
+    .skills-section {
+      margin-bottom: 30px;
+    }
+
+    .skills-section ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skills-section li {
+      background-color: #3498db;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    /* Experience, Education, and Projects Sections */
+    .experience-section, .education-section, .projects-section {
+      margin-bottom: 30px;
+    }
+
+    .experience-section p, .education-section p, .projects-section p {
+      margin-bottom: 10px;
+    }
+
+    /* Button Style */
+    button {
+      display: inline-block;
+      background-color: #2ecc71;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #27ae60;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .resume-container {
+        padding: 20px;
+      }
+
+      .profile-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-info {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-container" id="resume-container">
+
+    <!-- Profile Section -->
+    <div class="profile-section">
+      <div class="profile-picture-container" id="profilePictureContainer">
+        <img id="profilePicture" src="user.png" alt="Profile Picture" />
+        <input type="file" id="profileImageInput" accept="image/*">
+      </div>
+      <div class="profile-info">
+        <h2 contenteditable="true">John Doe</h2>
+        <p contenteditable="true">Highly skilled software engineer with a passion for problem-solving and innovation in technology.</p>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section" id="contact-section">
+      <h3>Contact Information</h3>
+      <ul>
+        <li contenteditable="true">Phone: +1 234 567 890</li>
+        <li contenteditable="true">Email: johndoe@example.com</li>
+        <li contenteditable="true">Website: www.johndoe.com</li>
+        <li contenteditable="true">Location: New York, NY</li>
+        <li contenteditable="true">LinkedIn: linkedin.com/in/johndoe</li>
+        <li contenteditable="true">GitHub: github.com/johndoe</li>
+      </ul>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-section" id="skills-section">
+      <h3>Skills</h3>
+      <ul>
+        <li contenteditable="true">JavaScript</li>
+        <li contenteditable="true">ReactJS</li>
+        <li contenteditable="true">Node.js</li>
+        <li contenteditable="true">SQL</li>
+        <li contenteditable="true">Git</li>
+        <li contenteditable="true">HTML/CSS</li>
+        <li contenteditable="true">Python</li>
+        <li contenteditable="true">Docker</li>
+        <li contenteditable="true">AWS</li>
+      </ul>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="experience-section" id="experience-section">
+      <h3>Professional Experience</h3>
+      <p contenteditable="true"><strong>Lead Software Engineer</strong> - XYZ Corp (2022 - Present)</p>
+      <p contenteditable="true">Lead a team of engineers to develop scalable and high-performance web applications. Spearheaded the transition to a microservices architecture, improving system reliability by 40%.</p>
+      <p contenteditable="true"><strong>Software Developer</strong> - ABC Tech (2018 - 2022)</p>
+      <p contenteditable="true">Worked on full-stack development, focusing on React and Node.js applications. Enhanced product features based on customer feedback, resulting in a 20% increase in user engagement.</p>
+      <p contenteditable="true"><strong>Junior Developer</strong> - DEF Solutions (2016 - 2018)</p>
+      <p contenteditable="true">Assisted senior developers in building web applications. Gained hands-on experience with SQL databases and learned best practices for front-end development.</p>
+    </div>
+
+    <!-- Education Section -->
+    <div class="education-section" id="education-section">
+      <h3>Education</h3>
+      <p contenteditable="true">Bachelor of Science in Computer Science - University of California, Berkeley (2018)</p>
+      <p contenteditable="true">Minor in Mathematics</p>
+      <p contenteditable="true">Relevant coursework: Algorithms, Data Structures, Web Development, Cloud Computing</p>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="education-section" id="certifications-section">
+      <h3>Certifications</h3>
+      <p contenteditable="true">AWS Certified Solutions Architect – Amazon Web Services (2021)</p>
+      <p contenteditable="true">Certified Kubernetes Administrator – CNCF (2020)</p>
+      <p contenteditable="true">Google Associate Cloud Engineer – Google Cloud (2021)</p>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projects-section" id="projects-section">
+      <h3>Projects</h3>
+      <p contenteditable="true"><strong>Task Management App</strong>: Developed a task management app using ReactJS and Node.js to manage daily tasks and deadlines with real-time collaboration.</p>
+      <p contenteditable="true"><strong>Personal Portfolio</strong>: Built a personal portfolio website showcasing my skills and projects, leveraging ReactJS and a Node.js backend.</p>
+      <p contenteditable="true"><strong>Weather App</strong>: Created a weather app that fetches data from a third-party API and displays real-time weather information based on location.</p>
+      <p contenteditable="true"><strong>Social Media Dashboard</strong>: Designed and implemented a dashboard for analyzing social media engagement across platforms like Twitter, Facebook, and Instagram.</p>
+    </div>
+
+    <!-- Download Button -->
+    <button id="downloadResumeBtn">Download Resume</button>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  <script>
+    const profilePicture = document.getElementById("profilePicture");
+    const profileImageInput = document.getElementById("profileImageInput");
+
+    // Open file picker when profile picture is clicked
+    profilePicture.addEventListener("click", () => {
+      profileImageInput.click();
+    });
+
+    // Change profile picture when a file is selected
+    profileImageInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (file && file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          profilePicture.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert("Please select a valid image file.");
+      }
+    });
+
+    const downloadResumeBtn = document.getElementById("downloadResumeBtn");
+    const resumeContainer = document.getElementById("resume-container");
+
+    // Listen for button click to generate PDF
+    downloadResumeBtn.addEventListener("click", () => {
+      // Hide the download button in the PDF output
+      downloadResumeBtn.style.display = "none";
+
+      const options = {
+        margin: [0.01, 0.01, 0.01, 0.01],
+        filename: 'corporate_resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: {
+          unit: 'in',
+          format: 'letter',
+          orientation: 'portrait',
+          compressPdf: true,
+          hotfixes: ['px_scaling']
+        }
+      };
+
+      html2pdf().set(options).from(resumeContainer).save().then(() => {
+        // Restore the download button after PDF is generated
+        downloadResumeBtn.style.display = "inline-block";
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimalist Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff; /* White background */
+      color: #333333;
+    }
+
+    .resume-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      font-size: 12px; /* Base font size */
+    }
+
+    .section {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0; /* Light grey divider */
+    }
+
+    h2, h3 {
+      font-weight: 500;
+      margin: 10px 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #2c3e50; /* Dark blue for title */
+    }
+
+    h3 {
+      font-size: 16px;
+      color: #3498db; /* Blue for section titles */
+    }
+
+    p {
+      font-size: 12px; /* Standard text size */
+      line-height: 1.6;
+      color: #555555;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    li::before {
+      content: '•';
+      color: #3498db; /* Blue bullet points */
+      margin-right: 5px;
+      font-size: 10px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    /* Profile Section */
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .profile-picture-container {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #e0e0e0;
+      cursor: pointer;
+    }
+
+    .profile-picture-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-section h2 {
+      font-size: 22px;
+      font-weight: 500;
+      color: #2c3e50;
+      margin: 0;
+    }
+
+    .profile-section p {
+      font-size: 12px;
+      line-height: 1.6;
+      color: #555555;
+    }
+
+    button {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 8px 16px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .resume-container {
+        width: 90%;
+      }
+
+      .profile-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-container" id="resume-container">
+    <!-- Profile Section -->
+    <div class="section" id="profile-section">
+      <div class="profile-section">
+        <div class="profile-picture-container" id="profilePictureContainer">
+          <img id="profilePicture" src="user.png" alt="Profile Picture" />
+          <input type="file" id="profileImageInput" accept="image/*">
+        </div>
+        <div>
+          <h2 contenteditable="true">Jane Smith</h2>
+          <p contenteditable="true">A dedicated software engineer with a passion for developing innovative solutions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section <div class="section" id="contact-section">
+      <h3>Contact</h3>
+      <ul>
+        <li contenteditable="true">Phone: +1 987 654 321</li>
+        <li contenteditable="true">Email: janesmith@example.com</li>
+        <li contenteditable="true">Website: www.janesmith.dev</li>
+        <li contenteditable="true">Location: New York, NY</li>
+      </ul>
+    </div>
+
+    <!-- Personal Info Section -->
+    <div class="section" id="personal-info-section">
+      <h3>Personal Information</h3>
+      <ul>
+        <li contenteditable="true">Date of Birth: February 2, 1992</li>
+        <li contenteditable="true">Nationality: American</li>
+        <li contenteditable="true">Gender: Female</li>
+        <li contenteditable="true">Marital Status: Married</li>
+      </ul>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section" id="skills-section">
+      <h3>Skills</h3>
+      <ul>
+        <li contenteditable="true">Python (Expert)</li>
+        <li contenteditable="true">Django (Advanced)</li>
+        <li contenteditable="true">PostgreSQL (Intermediate)</li>
+        <li contenteditable="true">HTML/CSS (Intermediate)</li>
+      </ul>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="section" id="experience-section">
+      <h3>Experience</h3>
+      <p contenteditable="true"><strong>Lead Software Engineer</strong> - DEF Inc (2021 - Present)</p>
+      <p contenteditable="true">Leading a team of developers to create scalable web applications and improve system performance.</p>
+      <p contenteditable="true"><strong>Software Developer</strong> - GHI Solutions (2018 - 2021)</p>
+      <p contenteditable="true">Developed and maintained web applications using Django and PostgreSQL, focusing on user experience and functionality.</p>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section" id="education-section">
+      <h3>Education</h3>
+      <p contenteditable="true">Master of Science in Computer Science - Stanford University (2018)</p>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section" id="projects-section">
+      <h3>Projects</h3>
+      <p contenteditable="true"><strong>Online Learning Platform</strong>: Developed a platform for online courses with user-friendly interfaces and interactive features.</p>
+      <p contenteditable="true"><strong>Weather App</strong>: Created a web application that provides real-time weather updates using external APIs.</p>
+    </div>
+
+    <!-- Languages Section -->
+    <div class="section" id="languages-section">
+      <h3>Languages</h3>
+      <ul>
+        <li contenteditable="true">English (Fluent)</li>
+        <li contenteditable="true">German (Intermediate)</li>
+        <li contenteditable="true">Italian (Basic)</li>
+      </ul>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="section" id="certifications-section">
+      <h3>Certifications</h3>
+      <ul>
+        <li contenteditable="true">Certified Python Developer - Python Institute (2021)</li>
+        <li contenteditable="true">Full Stack Development - Coding Bootcamp (2020)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Visible Download Button -->
+  <button id="downloadResumeBtn">Download Resume</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  <script>
+    const profilePicture = document.getElementById("profilePicture");
+    const profileImageInput = document.getElementById("profileImageInput");
+
+    // Open file picker when profile picture is clicked
+    profilePicture.addEventListener("click", () => {
+      profileImageInput.click();
+    });
+
+    // Change profile picture when a file is selected
+    profileImageInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (file && file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          profilePicture.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert("Please select a valid image file.");
+      }
+    });
+
+    const downloadResumeBtn = document 
+    .getElementById("downloadResumeBtn");
+    const resumeContainer = document.getElementById("resume-container");
+
+    // Listen for button click to generate PDF
+    downloadResumeBtn.addEventListener("click", () => {
+      // Hide the download button in the PDF output
+      downloadResumeBtn.style.display = "none";
+
+      const options = {
+        margin: [0.5, 0.5, 0.5, 0.5], // Standard margins
+        filename: 'minimalist_resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 }, // Higher scale for better quality
+        jsPDF: {
+          unit: 'in',
+          format: 'letter',
+          orientation: 'portrait',
+          compressPdf: true,
+          hotfixes: ['px_scaling']
+        }
+      };
+
+      html2pdf().set(options).from(resumeContainer).save().then(() => {
+        // Restore the download button after PDF is generated
+        downloadResumeBtn.style.display = "inline-block";
+      });
+    });
+  </script>
+
+</body>
+</html>

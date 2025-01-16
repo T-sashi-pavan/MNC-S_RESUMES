@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diversity and Inclusion Resume</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Customizable Styles */
+        .header, .section {
+            margin-bottom: 30px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 15px;
+        }
+
+        .profile-picture-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .profile-picture-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        .profile-info h2 {
+            font-size: 28px;
+            margin: 0;
+            color: #007BFF;
+        }
+
+        .profile-info p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .profile-info .editable {
+            border: 1px dashed #ddd;
+            padding: 5px;
+            background-color: #f4f4f4;
+            font-style: italic;
+        }
+
+        .section h3 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin: 10px 0;
+        }
+
+        .section ul li a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .section .editable {
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            padding: 10px;
+            margin-top: 8px;
+        }
+
+        .advocacy-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .advocacy {
+            background-color: #e6f7ff;
+            padding: 15px;
+            border-left: 5px solid #007BFF;
+            border-radius: 8px;
+        }
+
+        .advocacy-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .advocacy-description {
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .download-button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="diversity-inclusion-resume-container">
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="profile-picture-container" id="profilePictureContainer">
+            <img id="profilePicture" src="user.png" alt="Profile Picture">
+            <input type="file" id="profileImageInput" accept="image/*" style="display:none;">
+        </div>
+        <div class="profile-info">
+            <h2 contenteditable="true">Jasmine Patel</h2>
+            <p contenteditable="true">Diversity and Inclusion advocate with a passion for creating inclusive workplaces and promoting equality. Experienced in leading programs to support underrepresented groups, ensuring equitable opportunities for all.</p>
+        </div>
+    </div>
+
+    <!-- Diversity & Inclusion Advocacy Section -->
+    <div class="section advocacy-section">
+        <h3>Diversity & Inclusion Advocacy</h3>
+        <div class="advocacy">
+            <div class="advocacy-title" contenteditable="true">Diversity Hiring Initiative</div>
+            <div class="advocacy-description" contenteditable="true">Spearheaded a diversity hiring initiative that increased minority representation by 40% over the course of two years.</div>
+        </div>
+        <div class="advocacy">
+            <div class="advocacy-title" contenteditable="true">Unconscious Bias Training</div>
+            <div class="advocacy-description" contenteditable="true">Implemented a company-wide unconscious bias training program to promote fair treatment and awareness, impacting 500+ employees.</div>
+        </div>
+        <div class="advocacy">
+            <div class="advocacy-title" contenteditable="true">LGBTQ+ Support Programs</div>
+            <div class="advocacy-description" contenteditable="true">Developed and launched an internal support network for LGBTQ+ employees, fostering a more inclusive culture.</div>
+        </div>
+        <div class="advocacy">
+            <div class="advocacy-title" contenteditable="true">Women in Tech Mentorship</div>
+            <div class="advocacy-description" contenteditable="true">Created a mentorship program to support women in the tech industry, helping increase retention rates for female employees by 30%.</div>
+        </div>
+    </div>
+
+    <!-- Work Experience Section -->
+    <div class="section work-experience">
+        <h3>Work Experience</h3>
+        <ul>
+            <li contenteditable="true">Diversity & Inclusion Lead at GlobalTech (2021 - Present) - Developed diversity programs that resulted in a 50% increase in underrepresented talent hiring.</li>
+            <li contenteditable="true">Human Resources Specialist at InnovateCorp (2018 - 2021) - Managed diversity recruitment strategies and employee resource groups to improve company inclusivity.</li>
+        </ul>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section education">
+        <h3>Education</h3>
+        <ul>
+            <li contenteditable="true">M.A. in Human Resources, University of California, 2017</li>
+            <li contenteditable="true">B.A. in Sociology, University of Michigan, 2014</li>
+        </ul>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section skills">
+        <h3>Skills & Expertise</h3>
+        <ul>
+            <li contenteditable="true">Diversity and Inclusion Strategy</li>
+            <li contenteditable="true">Employee Resource Group Leadership</li>
+            <li contenteditable="true">Cultural Competency Training</li>
+            <li contenteditable="true">Organizational Development</li>
+            <li contenteditable="true">Data-Driven Decision Making</li>
+        </ul>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="section certifications">
+        <h3>Certifications</h3>
+        <ul>
+            <li contenteditable="true">Certified Diversity and Inclusion Professional (CDIP), 2020</li>
+            <li contenteditable="true">Certified Human Resources Professional (CHRP), 2019</li>
+        </ul>
+    </div>
+
+    <!-- Community Engagement Section -->
+    <div class="section community-engagement">
+        <h3>Community Engagement</h3>
+        <ul>
+            <li contenteditable="true">Volunteered with a non-profit organization to mentor underrepresented youth, focusing on leadership and career development.</li>
+            <li contenteditable="true">Organized local cultural events to celebrate diversity, attracting over 1,000 attendees.</li>
+        </ul>
+    </div>
+
+    <!-- Languages Section -->
+    <div class="section languages">
+        <h3>Languages</h3>
+        <ul>
+            <li contenteditable="true">English (Fluent)</li>
+            <li contenteditable="true">Spanish (Conversational)</li>
+            <li contenteditable="true">Hindi (Fluent)</li>
+        </ul>
+    </div>
+
+    <!-- Download Resume Button -->
+    <div class="download-button-container">
+        <button class="button" id="downloadResumeBtn">Download Resume</button>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script>
+    const profilePicture = document.getElementById("profilePicture");
+    const profileImageInput = document.getElementById("profileImageInput");
+
+    // Open file picker when profile picture is clicked
+    profilePicture.addEventListener("click", () => {
+        profileImageInput.click();
+    });
+
+    // Change profile picture when a file is selected
+    profileImageInput.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                profilePicture.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            alert("Please select a valid image file.");
+        }
+    });
+
+    const downloadResumeBtn = document.getElementById("downloadResumeBtn");
+    const resumeContainer = document.getElementById("diversity-inclusion-resume-container");
+
+    // Listen for button click to generate PDF
+    downloadResumeBtn.addEventListener("click", () => {
+        // Hide the download button in the PDF output
+        downloadResumeBtn.style.display = "none";
+
+        const options = {
+            margin: [0.1, 0.1, 0.1, 0.1],
+            filename: 'diversity_inclusion_resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: {
+                unit: 'in',
+                format: 'letter',
+                orientation: 'portrait',
+                compressPdf: true,
+                hotfixes: ['px_scaling'],
+                links: true  // Enable clickable links
+            }
+        };
+
+        html2pdf().set(options).from(resumeContainer).save().then(() => {
+            // Restore the download button after PDF is generated
+            downloadResumeBtn.style.display = "inline-block";
+        });
+    });
+</script>
+
+</body>
+</html>

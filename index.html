@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Templates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f9fa;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .heading {
+            font-size: 36px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px #000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+            gap: 20px;
+            justify-items: center;
+            margin-bottom: 40px;
+        }
+
+        .company-buttons button {
+            padding: 20px 40px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            width: 80%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .company-buttons button:hover {
+            background-color: #0056b3;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .company-buttons img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .templates {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 templates per row */
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .template {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 100%;
+            max-width: 300px;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .template:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .template img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .back {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #6c757d;
+            color: white;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back:hover {
+            background-color: #5a6268;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .company-buttons {
+                grid-template-columns: 1fr 1fr; /* 2 buttons per row on small screens */
+            }
+            .templates {
+                grid-template-columns: 1fr; /* Single column layout on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="companyPage">
+            <h1 class="heading">Choose Famous Multi-National Companies Shortlisted Resume Templates</h1>
+            <div class="company-buttons">
+                <button onclick="showTemplates('Google')">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.yPmpH1ehhtnXjLcOvs_WVwHaDt&pid=Api&P=0&h=180" alt="Google Logo">
+                    Google
+                </button>
+                <button onclick="showTemplates('Facebook')">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.bD6otkD2EDUCHCDdXc03-gHaGK&pid=Api&P=0&h=180" alt="Facebook Logo">
+                    Facebook
+                </button>
+                <button onclick="showTemplates('Tata')">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.NtXk46ERIZV5GhyN1e4N-AHaEa&pid=Api&P=0&h=180" alt="Tata Logo">
+                    Tata
+                </button>
+                <button onclick="showTemplates('Wipro')">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.VcA4IfRLIfs_tTGTCSyI6gHaEY&pid=Api&P=0&h=180" alt="Wipro Logo">
+                    Wipro
+                </button>
+                <button onclick="showTemplates('Nestle India')">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.x5g6Z8oeAIpD4P5Af9R1VAHaC3&pid=Api&P=0&h=180" alt="Nestle India Logo">
+                    Nestle India
+                </button>
+                <button onclick="showTemplates('Aditya Birla')">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.SysyFLE3VghxJp-AcnqxfAHaEe&pid=Api&P=0&h=180" alt="Aditya Birla Logo">
+                    Aditya Birla
+                </button>
+                <button onclick="showTemplates('Infosys')">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.v4yEsg7g85Dft3EV7RbeYQHaEH&pid=Api&P=0&h=180" alt="Infosys Logo">
+                    Infosys
+                </button>
+                <button onclick="showTemplates('Tech Mahindra')">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.qejz4yF9uttwkRCE3M0kNQHaFj&pid=Api&P=0&h=180" alt="Tech Mahindra Logo">
+                    Tech Mahindra
+                </button>
+                <button onclick="showTemplates('Deloitte')">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.roh9Ich5W2fgqYMF_uELCAHaGY&pid=Api&P=0&h=180" alt="Deloitte Logo">
+                    Deloitte
+                </button>
+                <button onclick="showTemplates('Capgemini')">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.OJ6hvrQ-emhEf1f9yfnoYwHaEK&pid=Api&P=0&h=180" alt="Capgemini Logo">
+                    Capgemini
+                </button>
+            </div>
+        </div>
+
+        <div id="templatePage" class="templates"></div>
+    </div>
+
+    <script>
+        const templates = {
+              Google: [
+                { name: "Google Template 1", img: "resume25.jpg", file: "resume25.html" },
+                { name: "Google Template 2", img: "resume33.jpg", file: "resume33.html" },
+                { name: "Google Template 3", img: "resume22.jpg", file: "resume22.html" },
+                { name: "Google Template 4", img: "resume23.jpg", file: "resume23.html" },
+                { name: "Google Template 5", img: "resume26.jpg", file: "resume26.html" },
+                { name: "Google Template 6", img: "resume28.jpg", file: "resume28.html" }
+            ],
+            Facebook: [
+                { name: "Facebook Template 1", img: "resume2.jpg", file: "resume2.html" },
+                { name: "Facebook Template 2", img: "resume4.jpg", file: "resume4.html" },
+                { name: "Facebook Template 3", img: "resume6.jpg", file: "resume6.html" },
+                { name: "Facebook Template 4", img: "resume8.jpg", file: "resume8.html" },
+                { name: "Facebook Template 5", img: "resume11.jpg", file: "resume11.html" },
+                { name: "Facebook Template 6", img: "resume13.jpg", file: "resume13.html" }
+            ],
+            Tata: [
+                { name: "Tata Template 1", img: "resume3.jpg", file: "resume3.html" },
+                { name: "Tata Template 2", img: "resume9.jpg", file: "resume9.html" },
+                { name: "Tata Template 3", img: "resume15.jpg", file: "resume15.html" },
+                { name: "Tata Template 4", img: "resume17.jpg", file: "resume17.html" },
+                { name: "Tata Template 5", img: "resume19.jpg", file: "resume19.html" },
+                { name: "Tata Template 6", img: "resume21.jpg", file: "resume21.html" }
+            ],
+            Wipro: [
+                { name: "Wipro Template 1", img: "resume10.jpg", file: "resume10.html" },
+                { name: "Wipro Template 2", img: "resume20.jpg", file: "resume20.html" },
+                { name: "Wipro Template 3", img: "resume32.jpg", file: "resume32.html" },
+                { name: "Wipro Template 4", img: "resume3.jpg", file: "resume3.html" },
+                { name: "Wipro Template 5", img: "resume8.jpg", file: "resume8.html" },
+                { name: "Wipro Template 6", img: "resume19.jpg", file: "resume19.html" }
+            ],
+            "Nestle India": [
+                { name: "Nestle India Template 1", img: "resume16.jpg", file: "resume16.html" },
+                { name: "Nestle India Template 2", img: "resume24.jpg", file: "resume24.html" },
+                { name: "Nestle India Template 3", img: "resume31.jpg", file: "resume31.html" },
+                { name: "Nestle India Template 4", img: "resume1.jpg", file: "resume1.html" },
+                { name: "Nestle India Template 5", img: "resume25.jpg", file: "resume25.html" },
+                { name: "Nestle India Template 6", img: "resume6.jpg", file: "resume6.html" }
+            ],
+            "Aditya Birla": [
+                { name: "Aditya Birla Template 1", img: "resume15.jpg", file: "resume15.html" },
+                { name: "Aditya Birla Template 2", img: "resume17.jpg", file: "resume17.html" },
+                { name: "Aditya Birla Template 3", img: "resume8.jpg", file: "resume8.html" },
+                { name: "Aditya Birla Template 4", img: "resume13.jpg", file: "resume13.html" },
+                { name: "Aditya Birla Template 5", img: "resume1.jpg", file: "resume1.html" },
+                { name: "Aditya Birla Template 6", img: "resume16.jpg", file: "resume16.html" }
+            ],
+            Infosys: [
+                { name: "Infosys Template 1", img: "resume33.jpg", file: "resume33.html" },
+                { name: "Infosys Template 2", img: "resume14.jpg", file: "resume14.html" },
+                { name: "Infosys Template 3", img: "resume17.jpg", file: "resume17.html" },
+                { name: "Infosys Template 4", img: "resume16.jpg", file: "resume16.html" },
+                { name: "Infosys Template 5", img: "resume15.jpg", file: "resume15.html" },
+                { name: "Infosys Template 6", img: "resume22.jpg", file: "resume22.html" }
+            ],
+            "Tech Mahindra": [
+                { name: "Tech Mahindra Template 1", img: "resume10.jpg", file: "resume10.html" },
+                { name: "Tech Mahindra Template 2", img: "resume11.jpg", file: "resume11.html" },
+                { name: "Tech Mahindra Template 3", img: "resume22.jpg", file: "resume22.html" },
+                { name: "Tech Mahindra Template 4", img: "resume25.jpg", file: "resume25.html" },
+                { name: "Tech Mahindra Template 5", img: "resume4.jpg", file: "resume4.html" },
+                { name: "Tech Mahindra Template 6", img: "resume32.jpg", file: "resume32.html" }
+            ],
+            Deloitte: [
+                { name: "Deloitte Template 1", img: "resume9.jpg", file: "resume9.html" },
+                { name: "Deloitte Template 2", img: "resume15.jpg", file: "resume15.html" },
+                { name: "Deloitte Template 3", img: "resume19.jpg", file: "resume19.html" },
+                { name: "Deloitte Template 4", img: "resume4.jpg", file: "resume4.html" },
+                { name: "Deloitte Template 5", img: "resume22.jpg", file: "resume22.html" },
+                { name: "Deloitte Template 6", img: "resume16.jpg", file: "resume16.html" }
+            ],
+            Capgemini: [
+                { name: "Capgemini Template 1", img: "resume19.jpg", file: "resume19.html" },
+                { name: "Capgemini Template 2", img: "resume13.jpg", file: "resume13.html" },
+                { name: "Capgemini Template 3", img: "resume15.jpg", file: "resume15.html" },
+                { name: "Capgemini Template 4", img: "resume4.jpg", file: "resume4.html" },
+                { name: "Capgemini Template 5", img: "resume5.jpg", file: "resume5.html" },
+                { name: "Capgemini Template 6", img: "resume16.jpg", file: "resume16.html" }
+            ]
+        };
+
+        function showTemplates(company) {
+            document.getElementById("companyPage").style.display = "none";
+            const templatePage = document.getElementById("templatePage");
+            templatePage.innerHTML = `<h2>${company} Resume Templates</h2>`;
+            templates[company].forEach((template) => {
+                templatePage.innerHTML += `
+                    <div class='template' onclick="editTemplate('${template.file}')">
+                        <img src="${template.img}" alt="${template.name}">
+                        <p>${template.name}</p>
+                    </div>
+                `;
+            });
+            templatePage.innerHTML += `<button class="back" onclick="goBackToCompanyPage()">Back</button>`;
+            templatePage.style.display = "grid";
+        }
+
+        function editTemplate(file) {
+            window.location.href = file;  // Directly open the selected resume HTML file
+        }
+
+        function goBackToCompanyPage() {
+            document.getElementById("templatePage").style.display = "none";
+            document.getElementById("companyPage").style.display = "block";
+        }
+    </script>
+</body>
+</html>

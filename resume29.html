@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Thinker Resume</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Customizable Styles */
+        .header, .section {
+            margin-bottom: 30px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 15px;
+        }
+
+        .profile-picture-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .profile-picture-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        .profile-info h2 {
+            font-size: 28px;
+            margin: 0;
+            color: #4CAF50;
+        }
+
+        .profile-info p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .profile-info .editable {
+            border: 1px dashed #ddd;
+            padding: 5px;
+            background-color: #f4f4f4;
+            font-style: italic;
+        }
+
+        .section h3 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin: 10px 0;
+        }
+
+        .section ul li a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        .section .editable {
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            padding: 10px;
+            margin-top: 8px;
+        }
+
+        .project-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            background-color: #f1f9f3;
+            padding: 15px;
+            border-left: 5px solid #4CAF50;
+            border-radius: 8px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .project-description {
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .download-button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="innovative-resume-container">
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="profile-picture-container" id="profilePictureContainer">
+            <img id="profilePicture" src="user.png" alt="Profile Picture">
+            <input type="file" id="profileImageInput" accept="image/*" style="display:none;">
+        </div>
+        <div class="profile-info">
+            <h2 contenteditable="true">Sophia Carter</h2>
+            <p contenteditable="true">Innovative problem-solver with a passion for creating transformative solutions. Experienced in managing creative teams, spearheading design thinking initiatives, and driving technological advancements.</p>
+        </div>
+    </div>
+
+    <!-- Key Projects Section -->
+    <div class="section project-section">
+        <h3>Key Projects & Initiatives</h3>
+        <div class="project">
+            <div class="project-title" contenteditable="true">Revamped E-commerce Platform</div>
+            <div class="project-description" contenteditable="true">Led a cross-functional team to redesign the e-commerce platform, increasing user engagement by 40% through UI/UX improvements and innovative search functionalities.</div>
+        </div>
+        <div class="project">
+            <div class="project-title" contenteditable="true">SaaS Product Development</div>
+            <div class="project-description" contenteditable="true">Collaborated with development teams to create a SaaS product that saved clients 30% in operational costs and improved process efficiency.</div>
+        </div>
+        <div class="project">
+            <div class="project-title" contenteditable="true">AI-Driven Chatbot</div>
+            <div class="project-description" contenteditable="true">Developed an AI-driven chatbot that automated customer service, reducing response time by 50% and enhancing customer satisfaction.</div>
+        </div>
+        <div class="project">
+            <div class="project-title" contenteditable="true">Creative Advertising Campaign</div>
+            <div class="project-description" contenteditable="true">Spearheaded a creative advertising campaign for a major brand, which increased awareness by 35% and resulted in a 20% boost in sales.</div>
+        </div>
+    </div>
+
+    <!-- Work Experience Section -->
+    <div class="section work-experience">
+        <h3>Work Experience</h3>
+        <ul>
+            <li contenteditable="true">Lead Creative Strategist at XYZ Innovations (2020 - Present) - Implemented creative strategies that significantly increased market share and customer engagement.</li>
+            <li contenteditable="true">Product Design Lead at InnovateTech (2017 - 2020) - Led design thinking workshops and implemented user-centered design principles to improve product usability.</li>
+        </ul>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section education">
+        <h3>Education</h3>
+        <ul>
+            <li contenteditable="true">M.A. in Design Thinking, MIT, 2018</li>
+            <li contenteditable="true">B.A. in Industrial Design, University of California, 2015</li>
+        </ul>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section skills">
+        <h3>Skills & Expertise</h3>
+        <ul>
+            <li contenteditable="true">Creative Problem-Solving</li>
+            <li contenteditable="true">User-Centered Design</li>
+            <li contenteditable="true">Team Leadership & Collaboration</li>
+            <li contenteditable="true">Design Thinking Workshops</li>
+            <li contenteditable="true">Technology Integration</li>
+        </ul>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="section certifications">
+        <h3>Certifications</h3>
+        <ul>
+            <li contenteditable="true">Certified Design Thinking Practitioner, 2020</li>
+            <li contenteditable="true">Project Management Professional (PMP), 2019</li>
+        </ul>
+    </div>
+
+    <!-- Creative Solutions Section -->
+    <div class="section creative-solutions">
+        <h3>Creative Solutions & Problem-Solving</h3>
+        <ul>
+            <li contenteditable="true">Improved user experience for a retail app by conducting empathy mapping, resulting in a 50% increase in app usage.</li>
+            <li contenteditable="true">Implemented a cross-functional brainstorming process to improve the speed and creativity of product development cycles.</li>
+        </ul>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div class="section hobbies">
+        <h3>Hobbies</h3>
+        <ul>
+            <li contenteditable="true">Innovative Thinking Workshops</li>
+            <li contenteditable="true">Traveling and Exploring New Cultures</li>
+            <li contenteditable="true">Designing Personal Projects</li>
+        </ul>
+    </div>
+
+    <!-- Download Resume Button -->
+    <div class="download-button-container">
+        <button class="button" id="downloadResumeBtn">Download Resume</button>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script>
+    const profilePicture = document.getElementById("profilePicture");
+    const profileImageInput = document.getElementById("profileImageInput");
+
+    // Open file picker when profile picture is clicked
+    profilePicture.addEventListener("click", () => {
+        profileImageInput.click();
+    });
+
+    // Change profile picture when a file is selected
+    profileImageInput.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                profilePicture.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            alert("Please select a valid image file.");
+        }
+    });
+
+    const downloadResumeBtn = document.getElementById("downloadResumeBtn");
+    const resumeContainer = document.getElementById("innovative-resume-container");
+
+    // Listen for button click to generate PDF
+    downloadResumeBtn.addEventListener("click", () => {
+        // Hide the download button in the PDF output
+        downloadResumeBtn.style.display = "none";
+
+        const options = {
+            margin: [0.1, 0.1, 0.1, 0.1],
+            filename: 'innovative_thinker_resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: {
+                unit: 'in',
+                format: 'letter',
+                orientation: 'portrait',
+                compressPdf: true,
+                hotfixes: ['px_scaling'],
+                links: true  // Enable clickable links
+            }
+        };
+
+        html2pdf().set(options).from(resumeContainer).save().then(() => {
+            // Restore the download button after PDF is generated
+            downloadResumeBtn.style.display = "inline-block";
+        });
+    });
+</script>
+
+</body>
+</html>

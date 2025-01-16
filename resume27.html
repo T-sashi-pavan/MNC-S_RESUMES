@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Achievements-Oriented Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .profile-picture-container {
+            position: relative;
+            width: 130px;
+            height: 130px;
+        }
+        .profile-picture-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-info h2 {
+            margin: 0;
+            font-size: 26px;
+        }
+        .profile-info p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        h3 {
+            border-bottom: 3px solid #007BFF;
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 8px 0;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .achievements-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .achievement {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .achievement-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .achievement-metric {
+            font-size: 18px;
+            color: #4CAF50;
+        }
+        .achievement-description {
+            font-size: 16px;
+        }
+        .download-button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="achievements-oriented-resume-container">
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-picture-container" id="profilePictureContainer">
+                <img id="profilePicture" src="user.png" alt="Profile Picture">
+                <input type="file" id="profileImageInput" accept="image/*" style="display:none;">
+            </div>
+            <div class="profile-info">
+                <h2 contenteditable="true">Olivia Grant</h2>
+                <p contenteditable="true">Results-driven project manager with a strong track record in increasing operational efficiency and leading teams to achieve ambitious goals. Skilled in budgeting, team leadership, and strategic planning.</p>
+            </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <div class="section achievements-section">
+            <h3>Key Achievements</h3>
+            <div class="achievement">
+                <div class="achievement-title" contenteditable="true">Increased Sales by 30%</div>
+                <div class="achievement-metric" contenteditable="true">+30% in sales revenue</div>
+                <p class="achievement-description" contenteditable="true">Successfully led a team of 10 to revamp the sales strategy, increasing sales revenue by 30% year-over-year.</p>
+            </div>
+            <div class="achievement">
+                <div class="achievement-title" contenteditable="true">Improved Customer Satisfaction by 40%</div>
+                <div class="achievement-metric" contenteditable="true">+40% in customer satisfaction</div>
+                <p class="achievement-description" contenteditable="true">Implemented customer feedback loops and improved service processes, resulting in a 40% increase in customer satisfaction rates.</p>
+            </div>
+            <div class="achievement">
+                <div class="achievement-title" contenteditable="true">Reduced Operational Costs by 15%</div>
+                <div class="achievement-metric" contenteditable="true">-15% operational costs</div>
+                <p class="achievement-description" contenteditable="true">Negotiated vendor contracts and optimized resource allocation, reducing operational costs by 15% while maintaining high service quality.</p>
+            </div>
+            <div class="achievement">
+                <div class="achievement-title" contenteditable="true">Launched New Product Line</div>
+                <div class="achievement-metric" contenteditable="true">Successfully launched 3 new products</div>
+                <p class="achievement-description" contenteditable="true">Coordinated the product development and marketing teams, resulting in the successful launch of three new products that generated $5M in revenue within the first quarter.</p>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section education">
+            <h3>Education</h3>
+            <ul>
+                <li contenteditable="true">M.A. in Business Management, Harvard University, 2019</li>
+                <li contenteditable="true">B.A. in Marketing, University of California, 2016</li>
+            </ul>
+        </div>
+
+        <!-- Work Experience Section -->
+        <div class="section work-experience">
+            <h3>Work Experience</h3>
+            <ul>
+                <li contenteditable="true">Senior Project Manager at XYZ Corp (2021 - Present) - Led cross-functional teams to deliver multiple successful projects on time and under budget.</li>
+                <li contenteditable="true">Project Manager at ABC Solutions (2018 - 2021) - Managed project schedules, budgets, and scope, ensuring that all deliverables were met.</li>
+            </ul>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section skills">
+            <h3>Skills</h3>
+            <ul>
+                <li contenteditable="true">Project Management</li>
+                <li contenteditable="true">Budgeting & Cost Management</li>
+                <li contenteditable="true">Team Leadership</li>
+                <li contenteditable="true">Strategic Planning</li>
+                <li contenteditable="true">Data Analysis</li>
+            </ul>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="section certifications">
+            <h3>Certifications</h3>
+            <ul>
+                <li contenteditable="true">Certified Project Management Professional (PMP), 2020</li>
+                <li contenteditable="true">Lean Six Sigma Green Belt, 2019</li>
+            </ul>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="section languages">
+            <h3>Languages</h3>
+            <ul>
+                <li contenteditable="true">English (Fluent)</li>
+                <li contenteditable="true">Spanish (Intermediate)</li>
+            </ul>
+        </div>
+
+        <!-- Hobbies Section -->
+        <div class="section hobbies">
+            <h3>Hobbies</h3>
+            <ul>
+                <li contenteditable="true">Hiking</li>
+                <li contenteditable="true">Cooking</li>
+                <li contenteditable="true">Traveling</li>
+            </ul>
+        </div>
+
+        <!-- Download Resume Button -->
+        <div class="download-button-container">
+            <button class="button" id="downloadResumeBtn">Download Resume</button>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script>
+        const profilePicture = document.getElementById("profilePicture");
+        const profileImageInput = document.getElementById("profileImageInput");
+
+        // Open file picker when profile picture is clicked
+        profilePicture.addEventListener("click", () => {
+            profileImageInput.click();
+        });
+
+        // Change profile picture when a file is selected
+        profileImageInput.addEventListener("change", (event) => {
+            const file = event.target.files[0];
+            if (file && file.type.startsWith("image/")) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    profilePicture.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert("Please select a valid image file.");
+            }
+        });
+
+        const downloadResumeBtn = document.getElementById("downloadResumeBtn");
+        const resumeContainer = document.getElementById("achievements-oriented-resume-container");
+
+        // Listen for button click to generate PDF
+        downloadResumeBtn.addEventListener("click", () => {
+            // Hide the download button in the PDF output
+            downloadResumeBtn.style.display = "none";
+
+            const options = {
+                margin: [0.1, 0.1, 0.1, 0.1],
+                filename: 'achievements_oriented_resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: {
+                    unit: 'in',
+                    format: 'letter',
+                    orientation: 'portrait',
+                    compressPdf: true,
+                    hotfixes: ['px_scaling'],
+                    links: true  // Enable clickable links
+                }
+            };
+
+            html2pdf().set(options).from(resumeContainer).save().then(() => {
+                // Restore the download button after PDF is generated
+                downloadResumeBtn.style.display = "inline-block";
+            });
+        });
+    </script>
+
+</body>
+</html>

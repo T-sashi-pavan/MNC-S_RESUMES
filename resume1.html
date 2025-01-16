@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Template</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fc; /* Light grey background */
+      color: #333333; /* Dark grey text */
+    }
+
+    .resume-container {
+      display: flex;
+      max-width: 1100px;
+      margin: 40px auto;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #ffffff; /* White background */
+    }
+
+    /* Left Section (Profile Picture + Personal Info) */
+    .left-section {
+      background-color: #2c3e50; /* Dark blue */
+      color: #ffffff; /* White text */
+      width: 30%;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .profile-picture-container {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      overflow: hidden;
+      border: 5px solid #ffffff; /* White border */
+      background-color: #7f8c8d; /* Grey background for the profile image */
+    }
+
+    .profile-picture-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .left-section h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 15px 0;
+    }
+
+    .left-section p {
+      font-size: 16px;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    .left-section h3 {
+      font-size: 18px;
+      margin-top: 30px;
+      font-weight: bold;
+      border-bottom: 3px solid #ffffff; /* White underline */
+      padding-bottom: 5px;
+    }
+
+    .left-section ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .left-section ul li {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .left-section ul li::before {
+      content: '▪';
+      color: #3498db; /* Blue bullet points */
+      margin-right: 10px;
+      font-size: 12px;
+    }
+
+    /* Right Section (Content) */
+    .right-section {
+      width: 70%;
+      padding: 30px;
+    }
+
+    .right-section h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #2c3e50; /* Dark blue heading */
+      border-bottom: 3px solid #3498db; /* Blue underline */
+      padding-bottom: 8px;
+    }
+
+    .right-section p {
+      font-size: 15px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: #555555; /* Medium grey text */
+    }
+
+    .right-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .right-section ul li {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .right-section ul li::before {
+      content: '▹';
+      color: #3498db; /* Blue bullet points */
+      margin-right: 8px;
+      font-size: 14px;
+    }
+
+    /* Buttons & Links */
+    button,
+    a {
+      display: inline-block;
+      font-size: 14px;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #3498db; /* Blue button */
+      padding: 12px 25px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover,
+    a:hover {
+      background-color: #2c3e50; /* Dark blue on hover */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .resume-container {
+        flex-direction: column;
+      }
+
+      .left-section,
+      .right-section {
+        width: 100%;
+      }
+
+      .left-section {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-container" id="resume-container">
+    <!-- Left Section -->
+    <div class="left-section">
+      <div class="profile">
+        <div class="profile-picture-container" id="profilePictureContainer">
+          <img id="profilePicture" src="user.png" alt="Profile Picture" />
+          <input type="file" id="profileImageInput" accept="image/*">
+        </div>
+        <h2 contenteditable="true">Jane Doe</h2>
+        <p contenteditable="true">Web Developer</p>
+      </div>
+      <div class="contact">
+        <h3>Contact</h3>
+        <ul>
+          <li contenteditable="true">Phone: +1 987 654 3210</li>
+          <li contenteditable="true">Email: janedoe@example.com</li>
+          <li contenteditable="true">Location: Los Angeles, CA</li>
+        </ul>
+      </div>
+      <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li contenteditable="true">HTML, CSS, JavaScript</li>
+          <li contenteditable="true">ReactJS</li>
+          <li contenteditable="true">Node.js</li>
+          <li contenteditable="true">PHP</li>
+        </ul>
+      </div>
+       <div class="languages">
+        <h3>Languages</h3>
+        <ul>
+          <li contenteditable="true">English (Fluent)</li>
+          <li contenteditable="true">Spanish (Intermediate)</li>
+          <li contenteditable="true">French (Basic)</li>
+           <li contenteditable="true">English (Fluent)</li>
+          <li contenteditable="true">Spanish (Intermediate)</li>
+          <li contenteditable="true">French (Basic)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <div class="summary">
+        <h3>Summary</h3>
+        <p contenteditable="true">A passionate and skilled Web Developer with experience in building responsive and user-friendly websites. Proficient in front-end and back-end technologies. Looking for new opportunities to leverage my skills and contribute to innovative projects.</p>
+      </div>
+      <div class="work-history">
+        <h3>Work Experience</h3>
+        <p contenteditable="true"><strong>Senior Web Developer</strong> - Tech Solutions</p>
+        <p contenteditable="true">Tech Solutions, Los Angeles, CA (2020 - Present)</p>
+        <p contenteditable="true">Built scalable web applications using ReactJS and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions.</p>
+
+        <p contenteditable="true"><strong>Junior Web Developer</strong> - WebWorks</p>
+        <p contenteditable="true">WebWorks, San Francisco, CA (2017 - 2020)</p>
+        <p contenteditable="true">Developed responsive websites using HTML, CSS, and JavaScript. Worked closely with clients to deliver customized solutions.</p>
+      </div>
+      <div class="projects">
+        <h3>Projects</h3>
+        <p contenteditable="true"><strong>E-Commerce Website</strong></p>
+        <p contenteditable="true">Developed a fully functional e-commerce website using ReactJS, integrating payment systems and order tracking.</p>
+
+        <p contenteditable="true"><strong>Personal Portfolio</strong></p>
+        <p contenteditable="true">Designed and developed a personal portfolio to showcase web development skills and projects, built with HTML, CSS, and JavaScript.</p>
+      </div>
+     
+      <div class="education">
+        <h3>Education</h3>
+        <p contenteditable="true">Bachelor's Degree in Computer Science - University of California, Los Angeles</p>
+        <p contenteditable="true">Graduated: 2017</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download Button -->
+  <button id="downloadResumeBtn" style="display: block; margin: 0 auto;">Download Resume</button>
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  <script>
+    const profilePicture = document.getElementById("profilePicture");
+    const profileImageInput = document.getElementById("profileImageInput");
+
+    // Open file picker when profile picture is clicked
+    profilePicture.addEventListener("click", () => {
+      profileImageInput.click();
+    });
+
+    // Change profile picture when a file is selected
+    profileImageInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (file && file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          profilePicture.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert("Please select a valid image file.");
+      }
+    });
+
+    const downloadResumeBtn = document.getElementById("downloadResumeBtn");
+    const resumeContainer = document.getElementById("resume-container");
+
+    downloadResumeBtn.addEventListener("click", () => {
+      // Hide the download button before PDF generation
+      downloadResumeBtn.style.display = "none";
+
+      const options = {
+        margin: [0.00001, 0.00001, 0.00001, 0.00001], // Reduced margins
+        filename: 'resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 }, // Increased scale for better quality
+        jsPDF: {
+          unit: 'in',
+          format: 'letter',
+          orientation: 'portrait',
+          compressPdf: true,
+          hotfixes: ['px_scaling']
+        }
+      };
+
+      html2pdf().set(options).from(resumeContainer).save().then(() => {
+        // Restore the download button after PDF is generated
+        downloadResumeBtn.style.display = "inline-block";
+      });
+    });
+  </script>
+</body>
+</html>
